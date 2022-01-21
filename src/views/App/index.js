@@ -1,22 +1,17 @@
 import logo from '~/images/logo.svg';
-import './index.css';
+import styled from 'styled-components'
+
+const ImgLogo = styled.img`
+  width: 16px;
+  height: 16px
+`
 
 function App() {
   return (
     <div className="App">
+      <ImgLogo src={logo} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );

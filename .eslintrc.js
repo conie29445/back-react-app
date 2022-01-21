@@ -8,6 +8,7 @@ module.exports = {
     "react-app/jest",
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react-pug/all"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -17,8 +18,10 @@ module.exports = {
   },
   "plugins": [
     "react",
+    "react-pug",
   ],
   "rules": {
+    'react-pug/prop-types': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-unused-vars': 'warn',
@@ -36,7 +39,9 @@ module.exports = {
         position: 'above',
       },
     ],
-    "react/prop-types": "warn",
+    "react/prop-types": "off",
     'comma-spacing': 'error',
+    'indent': ['error', 2, { SwitchCase: 1 }],
+    'key-spacing': ["error", { "beforeColon": false }],
   },
 }

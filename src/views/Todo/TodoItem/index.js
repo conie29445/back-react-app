@@ -1,4 +1,4 @@
-import { MuiButton } from '@/components/base'
+import Button from '@mui/material/Button'
 import styled from 'styled-components'
 
 const TodoItemWrap = styled.div`
@@ -22,21 +22,33 @@ const TodoContent = styled.div`
 
 const TodoButtonWrap = styled.div``
 
-const TodoItem = ({ todo }) => {
+const TodoItem = ({ todo, handleTodoDelete, handleToggleIsDone }) => {
+  const handleToggleClick = () => {
+    handleToggleIsDone(todo.id)
+  }
+  const handleDeleteClick = () => {
+    handleTodoDelete(todo.id)
+  }
   return (
     <TodoItemWrap className="todo__item">
-      <TodoContent>{todo}</TodoContent>
+      <TodoContent>{ todo.content }</TodoContent>
       <TodoButtonWrap>
-        <MuiButton
+        <Button
           variant="contained"
+          color = { todo.isDone ? 'success' : 'primary' }
+          onClick = {() => { handleToggleClick() }}
         >
-          已完成
-        </MuiButton>
-        <MuiButton
-          variant="outlined"
+          { todo.isDone ? '已完成' : '未完成' }
+        </Button>
+        <Button
+          variant = "outlined"
+          onClick = {() => { handleDeleteClick() }}
+          sx = {{
+            marginLeft: '8px',
+          }}
         >
           刪除
-        </MuiButton>
+        </Button>
       </TodoButtonWrap>
     </TodoItemWrap>
   )

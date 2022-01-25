@@ -2,19 +2,16 @@ import logo from '~/images/logo.svg';
 import styled from 'styled-components'
 
 const ImgLogo = styled.img`
-  width: 16px;
-  height: 16px
+  width: 120px;
+  height: 120px
 `
 
-function App() {
+function App () {
   return (
-    <div className="App">
+    <div className="app__wrap">
       <ImgLogo src={logo} />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
     </div>
-  );
+  )
 }
 
 export default App;

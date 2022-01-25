@@ -3,14 +3,13 @@
 Telling nvm which node to use with the .nvmrc file.
 
 ### `yarn reserve`
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### `yarn test`
 
-### `yarn build`\
+### `yarn build`
 
-## Project 
 ```
 |-- node_modules
 |-- src

@@ -6,17 +6,12 @@ function resolve (dir) {
 
 const {
   override,
-  disableEsLint,
-  addBabelPlugin,
   addWebpackAlias,
 } = require('customize-cra')
 
 module.exports = override(
-  //避開判定pug為未識別字元
-  disableEsLint(),
-  addBabelPlugin('transform-react-pug'),
   addWebpackAlias({
-    ['@']: path.resolve(__dirname, 'src'),
-    ['~']: resolve('./src/assets'),
-  })
+    '@': path.resolve(__dirname, 'src'),
+    '~': resolve('./src/assets'),
+  }),
 )

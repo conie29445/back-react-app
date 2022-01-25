@@ -1,7 +1,6 @@
+import Button from '@mui/material/Button'
 
-import Button from '@material-ui/core/Button';
-
-export default function CButton (props) {
+function MuiButton (props) {
   return (
     <Button
       variant={ props.variant }
@@ -11,3 +10,5 @@ export default function CButton (props) {
     </Button>
   )
 }
+
+export default MuiButton

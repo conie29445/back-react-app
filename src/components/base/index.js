@@ -1,5 +1,5 @@
-import CButton from './Button'
+import MuiButton from './Button'
 
 export {
-  CButton,
+  MuiButton,
 }
